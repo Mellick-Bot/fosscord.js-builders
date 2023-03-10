@@ -21,96 +21,96 @@ import {
 
 describe('Messages', () => {
 	describe('codeBlock', () => {
-		test('GIVEN "fosscord.js" with no language THEN returns "```\\nfosscord.js```"', () => {
-			expect<'```\nfosscord.js```'>(codeBlock('fosscord.js')).toBe('```\nfosscord.js```');
+		test('GIVEN "fosscord-gopnik" with no language THEN returns "```\\nfosscord-gopnik```"', () => {
+			expect<'```\nfosscord-gopnik```'>(codeBlock('fosscord-gopnik')).toBe('```\nfosscord-gopnik```');
 		});
 
-		test('GIVEN "fosscord.js" with "js" as language THEN returns "```js\\nfosscord.js```"', () => {
-			expect<'```js\nfosscord.js```'>(codeBlock('js', 'fosscord.js')).toBe('```js\nfosscord.js```');
+		test('GIVEN "fosscord-gopnik" with "js" as language THEN returns "```js\\nfosscord-gopnik```"', () => {
+			expect<'```js\nfosscord-gopnik```'>(codeBlock('js', 'fosscord-gopnik')).toBe('```js\nfosscord-gopnik```');
 		});
 	});
 
 	describe('inlineCode', () => {
-		test('GIVEN "fosscord.js" THEN returns "`fosscord.js`"', () => {
-			expect<'`fosscord.js`'>(inlineCode('fosscord.js')).toBe('`fosscord.js`');
+		test('GIVEN "fosscord-gopnik" THEN returns "`fosscord-gopnik`"', () => {
+			expect<'`fosscord-gopnik`'>(inlineCode('fosscord-gopnik')).toBe('`fosscord-gopnik`');
 		});
 	});
 
 	describe('italic', () => {
-		test('GIVEN "fosscord.js" THEN returns "_fosscord.js_"', () => {
-			expect<'_fosscord.js_'>(italic('fosscord.js')).toBe('_fosscord.js_');
+		test('GIVEN "fosscord-gopnik" THEN returns "_fosscord-gopnik_"', () => {
+			expect<'_fosscord-gopnik_'>(italic('fosscord-gopnik')).toBe('_fosscord-gopnik_');
 		});
 	});
 
 	describe('bold', () => {
-		test('GIVEN "fosscord.js" THEN returns "**fosscord.js**"', () => {
-			expect<'**fosscord.js**'>(bold('fosscord.js')).toBe('**fosscord.js**');
+		test('GIVEN "fosscord-gopnik" THEN returns "**fosscord-gopnik**"', () => {
+			expect<'**fosscord-gopnik**'>(bold('fosscord-gopnik')).toBe('**fosscord-gopnik**');
 		});
 	});
 
 	describe('underscore', () => {
-		test('GIVEN "fosscord.js" THEN returns "__fosscord.js__"', () => {
-			expect<'__fosscord.js__'>(underscore('fosscord.js')).toBe('__fosscord.js__');
+		test('GIVEN "fosscord-gopnik" THEN returns "__fosscord-gopnik__"', () => {
+			expect<'__fosscord-gopnik__'>(underscore('fosscord-gopnik')).toBe('__fosscord-gopnik__');
 		});
 	});
 
 	describe('strikethrough', () => {
-		test('GIVEN "fosscord.js" THEN returns "~~fosscord.js~~"', () => {
-			expect<'~~fosscord.js~~'>(strikethrough('fosscord.js')).toBe('~~fosscord.js~~');
+		test('GIVEN "fosscord-gopnik" THEN returns "~~fosscord-gopnik~~"', () => {
+			expect<'~~fosscord-gopnik~~'>(strikethrough('fosscord-gopnik')).toBe('~~fosscord-gopnik~~');
 		});
 	});
 
 	describe('quote', () => {
-		test('GIVEN "fosscord.js" THEN returns "> fosscord.js"', () => {
-			expect<'> fosscord.js'>(quote('fosscord.js')).toBe('> fosscord.js');
+		test('GIVEN "fosscord-gopnik" THEN returns "> fosscord-gopnik"', () => {
+			expect<'> fosscord-gopnik'>(quote('fosscord-gopnik')).toBe('> fosscord-gopnik');
 		});
 	});
 
 	describe('blockQuote', () => {
-		test('GIVEN "fosscord.js" THEN returns ">>> fosscord.js"', () => {
-			expect<'>>> fosscord.js'>(blockQuote('fosscord.js')).toBe('>>> fosscord.js');
+		test('GIVEN "fosscord-gopnik" THEN returns ">>> fosscord-gopnik"', () => {
+			expect<'>>> fosscord-gopnik'>(blockQuote('fosscord-gopnik')).toBe('>>> fosscord-gopnik');
 		});
 	});
 
 	describe('hideLinkEmbed', () => {
-		test('GIVEN "https://fosscord.js.org" THEN returns "<https://fosscord.js.org>"', () => {
-			expect<'<https://fosscord.js.org>'>(hideLinkEmbed('https://fosscord.js.org')).toBe('<https://fosscord.js.org>');
+		test('GIVEN "https://fosscord-gopnik.org" THEN returns "<https://fosscord-gopnik.org>"', () => {
+			expect<'<https://fosscord-gopnik.org>'>(hideLinkEmbed('https://fosscord-gopnik.org')).toBe('<https://fosscord-gopnik.org>');
 		});
 
-		test('GIVEN new URL("https://fosscord.js.org") THEN returns "<https://fosscord.js.org>"', () => {
-			expect<`<${string}>`>(hideLinkEmbed(new URL('https://fosscord.js.org/'))).toBe('<https://fosscord.js.org/>');
+		test('GIVEN new URL("https://fosscord-gopnik.org") THEN returns "<https://fosscord-gopnik.org>"', () => {
+			expect<`<${string}>`>(hideLinkEmbed(new URL('https://fosscord-gopnik.org/'))).toBe('<https://fosscord-gopnik.org/>');
 		});
 	});
 
 	describe('hyperlink', () => {
 		test('GIVEN content and string URL THEN returns "[content](url)"', () => {
-			expect<'[fosscord.js](https://fosscord.js.org)'>(hyperlink('fosscord.js', 'https://fosscord.js.org')).toBe(
-				'[fosscord.js](https://fosscord.js.org)',
+			expect<'[fosscord-gopnik](https://fosscord-gopnik.org)'>(hyperlink('fosscord-gopnik', 'https://fosscord-gopnik.org')).toBe(
+				'[fosscord-gopnik](https://fosscord-gopnik.org)',
 			);
 		});
 
 		test('GIVEN content and URL THEN returns "[content](url)"', () => {
-			expect<`[fosscord.js](${string})`>(hyperlink('fosscord.js', new URL('https://fosscord.js.org'))).toBe(
-				'[fosscord.js](https://fosscord.js.org/)',
+			expect<`[fosscord-gopnik](${string})`>(hyperlink('fosscord-gopnik', new URL('https://fosscord-gopnik.org'))).toBe(
+				'[fosscord-gopnik](https://fosscord-gopnik.org/)',
 			);
 		});
 
 		test('GIVEN content, string URL, and title THEN returns "[content](url "title")"', () => {
-			expect<'[fosscord.js](https://fosscord.js.org "Official Documentation")'>(
-				hyperlink('fosscord.js', 'https://fosscord.js.org', 'Official Documentation'),
-			).toBe('[fosscord.js](https://fosscord.js.org "Official Documentation")');
+			expect<'[fosscord-gopnik](https://fosscord-gopnik.org "Official Documentation")'>(
+				hyperlink('fosscord-gopnik', 'https://fosscord-gopnik.org', 'Official Documentation'),
+			).toBe('[fosscord-gopnik](https://fosscord-gopnik.org "Official Documentation")');
 		});
 
 		test('GIVEN content, URL, and title THEN returns "[content](url "title")"', () => {
-			expect<`[fosscord.js](${string} "Official Documentation")`>(
-				hyperlink('fosscord.js', new URL('https://fosscord.js.org'), 'Official Documentation'),
-			).toBe('[fosscord.js](https://fosscord.js.org/ "Official Documentation")');
+			expect<`[fosscord-gopnik](${string} "Official Documentation")`>(
+				hyperlink('fosscord-gopnik', new URL('https://fosscord-gopnik.org'), 'Official Documentation'),
+			).toBe('[fosscord-gopnik](https://fosscord-gopnik.org/ "Official Documentation")');
 		});
 	});
 	
 	describe('spoiler', () => {
-		test('GIVEN "fosscord.js" THEN returns "||fosscord.js||"', () => {
-			expect<'||fosscord.js||'>(spoiler('fosscord.js')).toBe('||fosscord.js||');
+		test('GIVEN "fosscord-gopnik" THEN returns "||fosscord-gopnik||"', () => {
+			expect<'||fosscord-gopnik||'>(spoiler('fosscord-gopnik')).toBe('||fosscord-gopnik||');
 		});
 	});
 
