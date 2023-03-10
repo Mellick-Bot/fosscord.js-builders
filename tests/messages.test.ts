@@ -21,96 +21,96 @@ import {
 
 describe('Messages', () => {
 	describe('codeBlock', () => {
-		test('GIVEN "discord.js" with no language THEN returns "```\\ndiscord.js```"', () => {
-			expect<'```\ndiscord.js```'>(codeBlock('discord.js')).toBe('```\ndiscord.js```');
+		test('GIVEN "fosscord.js" with no language THEN returns "```\\nfosscord.js```"', () => {
+			expect<'```\nfosscord.js```'>(codeBlock('fosscord.js')).toBe('```\nfosscord.js```');
 		});
 
-		test('GIVEN "discord.js" with "js" as language THEN returns "```js\\ndiscord.js```"', () => {
-			expect<'```js\ndiscord.js```'>(codeBlock('js', 'discord.js')).toBe('```js\ndiscord.js```');
+		test('GIVEN "fosscord.js" with "js" as language THEN returns "```js\\nfosscord.js```"', () => {
+			expect<'```js\nfosscord.js```'>(codeBlock('js', 'fosscord.js')).toBe('```js\nfosscord.js```');
 		});
 	});
 
 	describe('inlineCode', () => {
-		test('GIVEN "discord.js" THEN returns "`discord.js`"', () => {
-			expect<'`discord.js`'>(inlineCode('discord.js')).toBe('`discord.js`');
+		test('GIVEN "fosscord.js" THEN returns "`fosscord.js`"', () => {
+			expect<'`fosscord.js`'>(inlineCode('fosscord.js')).toBe('`fosscord.js`');
 		});
 	});
 
 	describe('italic', () => {
-		test('GIVEN "discord.js" THEN returns "_discord.js_"', () => {
-			expect<'_discord.js_'>(italic('discord.js')).toBe('_discord.js_');
+		test('GIVEN "fosscord.js" THEN returns "_fosscord.js_"', () => {
+			expect<'_fosscord.js_'>(italic('fosscord.js')).toBe('_fosscord.js_');
 		});
 	});
 
 	describe('bold', () => {
-		test('GIVEN "discord.js" THEN returns "**discord.js**"', () => {
-			expect<'**discord.js**'>(bold('discord.js')).toBe('**discord.js**');
+		test('GIVEN "fosscord.js" THEN returns "**fosscord.js**"', () => {
+			expect<'**fosscord.js**'>(bold('fosscord.js')).toBe('**fosscord.js**');
 		});
 	});
 
 	describe('underscore', () => {
-		test('GIVEN "discord.js" THEN returns "__discord.js__"', () => {
-			expect<'__discord.js__'>(underscore('discord.js')).toBe('__discord.js__');
+		test('GIVEN "fosscord.js" THEN returns "__fosscord.js__"', () => {
+			expect<'__fosscord.js__'>(underscore('fosscord.js')).toBe('__fosscord.js__');
 		});
 	});
 
 	describe('strikethrough', () => {
-		test('GIVEN "discord.js" THEN returns "~~discord.js~~"', () => {
-			expect<'~~discord.js~~'>(strikethrough('discord.js')).toBe('~~discord.js~~');
+		test('GIVEN "fosscord.js" THEN returns "~~fosscord.js~~"', () => {
+			expect<'~~fosscord.js~~'>(strikethrough('fosscord.js')).toBe('~~fosscord.js~~');
 		});
 	});
 
 	describe('quote', () => {
-		test('GIVEN "discord.js" THEN returns "> discord.js"', () => {
-			expect<'> discord.js'>(quote('discord.js')).toBe('> discord.js');
+		test('GIVEN "fosscord.js" THEN returns "> fosscord.js"', () => {
+			expect<'> fosscord.js'>(quote('fosscord.js')).toBe('> fosscord.js');
 		});
 	});
 
 	describe('blockQuote', () => {
-		test('GIVEN "discord.js" THEN returns ">>> discord.js"', () => {
-			expect<'>>> discord.js'>(blockQuote('discord.js')).toBe('>>> discord.js');
+		test('GIVEN "fosscord.js" THEN returns ">>> fosscord.js"', () => {
+			expect<'>>> fosscord.js'>(blockQuote('fosscord.js')).toBe('>>> fosscord.js');
 		});
 	});
 
 	describe('hideLinkEmbed', () => {
-		test('GIVEN "https://discord.js.org" THEN returns "<https://discord.js.org>"', () => {
-			expect<'<https://discord.js.org>'>(hideLinkEmbed('https://discord.js.org')).toBe('<https://discord.js.org>');
+		test('GIVEN "https://fosscord.js.org" THEN returns "<https://fosscord.js.org>"', () => {
+			expect<'<https://fosscord.js.org>'>(hideLinkEmbed('https://fosscord.js.org')).toBe('<https://fosscord.js.org>');
 		});
 
-		test('GIVEN new URL("https://discord.js.org") THEN returns "<https://discord.js.org>"', () => {
-			expect<`<${string}>`>(hideLinkEmbed(new URL('https://discord.js.org/'))).toBe('<https://discord.js.org/>');
+		test('GIVEN new URL("https://fosscord.js.org") THEN returns "<https://fosscord.js.org>"', () => {
+			expect<`<${string}>`>(hideLinkEmbed(new URL('https://fosscord.js.org/'))).toBe('<https://fosscord.js.org/>');
 		});
 	});
 
 	describe('hyperlink', () => {
 		test('GIVEN content and string URL THEN returns "[content](url)"', () => {
-			expect<'[discord.js](https://discord.js.org)'>(hyperlink('discord.js', 'https://discord.js.org')).toBe(
-				'[discord.js](https://discord.js.org)',
+			expect<'[fosscord.js](https://fosscord.js.org)'>(hyperlink('fosscord.js', 'https://fosscord.js.org')).toBe(
+				'[fosscord.js](https://fosscord.js.org)',
 			);
 		});
 
 		test('GIVEN content and URL THEN returns "[content](url)"', () => {
-			expect<`[discord.js](${string})`>(hyperlink('discord.js', new URL('https://discord.js.org'))).toBe(
-				'[discord.js](https://discord.js.org/)',
+			expect<`[fosscord.js](${string})`>(hyperlink('fosscord.js', new URL('https://fosscord.js.org'))).toBe(
+				'[fosscord.js](https://fosscord.js.org/)',
 			);
 		});
 
 		test('GIVEN content, string URL, and title THEN returns "[content](url "title")"', () => {
-			expect<'[discord.js](https://discord.js.org "Official Documentation")'>(
-				hyperlink('discord.js', 'https://discord.js.org', 'Official Documentation'),
-			).toBe('[discord.js](https://discord.js.org "Official Documentation")');
+			expect<'[fosscord.js](https://fosscord.js.org "Official Documentation")'>(
+				hyperlink('fosscord.js', 'https://fosscord.js.org', 'Official Documentation'),
+			).toBe('[fosscord.js](https://fosscord.js.org "Official Documentation")');
 		});
 
 		test('GIVEN content, URL, and title THEN returns "[content](url "title")"', () => {
-			expect<`[discord.js](${string} "Official Documentation")`>(
-				hyperlink('discord.js', new URL('https://discord.js.org'), 'Official Documentation'),
-			).toBe('[discord.js](https://discord.js.org/ "Official Documentation")');
+			expect<`[fosscord.js](${string} "Official Documentation")`>(
+				hyperlink('fosscord.js', new URL('https://fosscord.js.org'), 'Official Documentation'),
+			).toBe('[fosscord.js](https://fosscord.js.org/ "Official Documentation")');
 		});
 	});
 	
 	describe('spoiler', () => {
-		test('GIVEN "discord.js" THEN returns "||discord.js||"', () => {
-			expect<'||discord.js||'>(spoiler('discord.js')).toBe('||discord.js||');
+		test('GIVEN "fosscord.js" THEN returns "||fosscord.js||"', () => {
+			expect<'||fosscord.js||'>(spoiler('fosscord.js')).toBe('||fosscord.js||');
 		});
 	});
 
