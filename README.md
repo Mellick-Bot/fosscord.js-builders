@@ -1,7 +1,7 @@
 <div align="center">
 	<br />
 	<p>
-		<a href="https://fosscord.js.org"><img src="https://fosscord.js.org/static/logo.svg" width="546" alt="fosscord.js" /></a>
+		<a href="https://fosscord-gopnik.org"><img src="https://fosscord-gopnik.org/static/logo.svg" width="546" alt="fosscord-gopnik" /></a>
 	</p>
 	<br />
 		<p>
